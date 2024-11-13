@@ -42,15 +42,14 @@ body {
 
 .top {
     display: flex;
-    align-items: center;
+    align-items: end;
     gap: 20px;
-    padding-top: 80px;
+    padding-top: 40px;
     justify-content: center;
     position: absolute;
     top: 0;
     width: 100%;
 }
-
 
 .wrap-img {
     max-width: 100%;
@@ -69,33 +68,58 @@ body {
     height: auto;
 }
 
-
 .bottom {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 40px;
+    padding: 20px;
     color: white;
     display: flex;
     align-items: start;
     flex-direction: column;
 }
+
 .text {
-    font-size: 20px;
-    width: 80%;
-    padding-bottom: 50px;
+    font-size: 18px;
+    width: 90%;
+    padding-bottom: 30px;
 }
+
 .wrap-contact {
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+    align-items: center;
+    justify-content: center;
 }
+
 .contact-img {
     padding-left: 10px;
 }
 
-/* Media Query for Larger Screens */
-@media (min-width: 768px) {
+/* Media Query for Tablets (Portrait and Landscape) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .page-wrap {
+        flex-direction: row;
+    }
+    .left-half {
+        width: 35%;
+        height: 100%;
+    }
+    .right-half {
+        width: 65%;
+        height: 100%;
+    }
+    .bottom .text {
+        font-size: 20px;
+    }
+    .wrap-contact {
+        font-size: 20px;
+    }
+}
+
+/* Media Query for Desktops */
+@media (min-width: 1024px) {
     .page-wrap {
         flex-direction: row;
     }
@@ -109,5 +133,23 @@ body {
     }
     .hero-img img {
         height: 99vh;
+    }
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 599px) {
+    .top {
+        gap: 10px;
+        padding: 20px;
+    }
+    .text {
+        font-size: 16px;
+        padding-bottom: 20px;
+    }
+    .wrap-contact {
+        font-size: 16px;
+    }
+    .bottom {
+        padding: 20px;
     }
 }
